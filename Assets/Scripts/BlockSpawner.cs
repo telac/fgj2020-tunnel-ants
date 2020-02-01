@@ -24,7 +24,7 @@ public class BlockSpawner : MonoBehaviour
     void SpawnRock() {
         int i = Random.Range(0, rockSpawnPoints.Count);
         Debug.Log(i);
-        Instantiate(rockPrefab, rockSpawnPoints[1].position, rockPrefab.transform.rotation);
+        Instantiate(rockPrefab, rockSpawnPoints[i].position, rockPrefab.transform.rotation);
     }
 
     // Update is called once per frame
