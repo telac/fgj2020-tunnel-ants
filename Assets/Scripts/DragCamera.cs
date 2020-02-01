@@ -10,8 +10,10 @@ public class DragCamera : MonoBehaviour
     private bool drag = false;
     private Camera cam;
 
-    public Vector3 llCorner = new Vector3(-17, 10, -20);
-    public Vector3 urCorner = new Vector3(17, 10, 20);
+    public Vector3 llCorner = new Vector3(-26, 10, -26);
+    public Vector3 urCorner = new Vector3(26, 10, 26);
+    public float maxScroll = 20;
+    public float minScroll = 5;
 
     private void Awake() {
         cam = Camera.main;
@@ -35,7 +37,23 @@ public class DragCamera : MonoBehaviour
             cam.transform.position = origin - difference;
 
         if (Input.GetMouseButton(1))
+        {
             cam.transform.position = resetCamera;
+            cam.orthographicSize = 10;
+        }
+
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+        {
+            cam.orthographicSize++;
+            if (cam.orthographicSize > maxScroll)
+                cam.orthographicSize = maxScroll;
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+        {
+            cam.orthographicSize--;
+            if (cam.orthographicSize < minScroll)
+                cam.orthographicSize = minScroll;
+        }
 
         clampedPos = cam.transform.position;
         if (clampedPos.x < llCorner.x)

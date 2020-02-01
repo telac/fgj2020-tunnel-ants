@@ -8,6 +8,7 @@ public class PathfindingMovement : MonoBehaviour {
     private NavMeshPath path;
     private float elapsed = 0.0f;
     private NavMeshAgent agent;
+    public GameObject resizer;
 
     public enum Item {Empty, Baby, Blueb, Leaf, Strawb};
     private Item currentItem = Item.Empty;
@@ -109,5 +110,11 @@ public class PathfindingMovement : MonoBehaviour {
         
         for (int i = 0; i < path.corners.Length - 1; i++)
             Debug.DrawLine(path.corners[i], path.corners[i + 1], Color.red);
+
+        if (currentItem == Item.Empty)
+        {
+            float sin = (Mathf.Sin(Time.time) + 2.0f) * 0.25f;
+            resizer.transform.localScale = new Vector3(0.75f + sin, 1.0f, 0.75f + sin);
+        }
     }
 }
