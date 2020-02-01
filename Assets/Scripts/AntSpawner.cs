@@ -5,26 +5,36 @@ using UnityEngine;
 public class AntSpawner : MonoBehaviour
 {
     public List<Transform> spawnPoints;
+    public List<Transform> itemPositions;
     public GameObject antPrefab;
-    public GameObject itemPrefab;
+
+    public GameObject item1;
+    public GameObject item2;
+    public GameObject item3;
+    public GameObject item4;
 
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Spawn ant");
+            //Debug.Log("Spawn ant");
             SpawnAnt();
         }
     }
 
     public void SpawnAnt() {
-        int start, end;
-        start = end = Random.Range(0, spawnPoints.Count);
-        while (start == end)
-            end = Random.Range(0, spawnPoints.Count);
+        GameObject ant = Instantiate(antPrefab, spawnPoints[Random.Range(0, spawnPoints.Count)].position, Quaternion.identity);
+        GameObject item;
 
-        GameObject ant = Instantiate(antPrefab, spawnPoints[start].position, Quaternion.identity);
-        GameObject item = Instantiate(itemPrefab, spawnPoints[end].position, Quaternion.identity);
-
+        int rand = Random.Range(0, 3);
+        if (rand == 0)
+            item = Instantiate(item1, itemPositions[Random.Range(0, itemPositions.Count)].position, Quaternion.identity);
+        else if (rand == 1)
+            item = Instantiate(item2, itemPositions[Random.Range(0, itemPositions.Count)].position, Quaternion.identity);
+        else if (rand == 2)
+            item = Instantiate(item3, itemPositions[Random.Range(0, itemPositions.Count)].position, Quaternion.identity);
+        else
+            item = Instantiate(item4, itemPositions[Random.Range(0, itemPositions.Count)].position, Quaternion.identity);
+        
         PathfindingMovement pathing = ant.GetComponent<PathfindingMovement>();
         if (pathing != null)
         {
