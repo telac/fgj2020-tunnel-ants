@@ -6,8 +6,7 @@ public class PathfindingMovement : MonoBehaviour {
     private NavMeshPath path;
     private float elapsed = 0.0f;
     private NavMeshAgent agent;
-
-
+    
     private void Awake() {
         path = new NavMeshPath();
         elapsed = 0.0f;
@@ -25,6 +24,13 @@ public class PathfindingMovement : MonoBehaviour {
         }
         if (path.status == UnityEngine.AI.NavMeshPathStatus.PathComplete) {
             agent.path = path;
+        }
+
+        float distance = Vector3.Distance(transform.position, target.transform.position);
+        if (distance < 1.0f)
+        {
+            Destroy(target.gameObject);
+            Destroy(gameObject);
         }
         
         for (int i = 0; i < path.corners.Length - 1; i++)
