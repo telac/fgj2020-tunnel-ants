@@ -3,11 +3,11 @@ using System.Collections;
 
 public class DragCamera : MonoBehaviour
 {
-    private Vector3 ResetCamera;
-    private Vector3 Origin;
-    private Vector3 Diference;
+    private Vector3 resetCamera;
+    private Vector3 origin;
+    private Vector3 difference;
     private Vector3 clampedPos;
-    private bool Drag = false;
+    private bool drag = false;
     private Camera cam;
 
     public Vector3 llCorner = new Vector3(-17, 10, -20);
@@ -15,27 +15,27 @@ public class DragCamera : MonoBehaviour
 
     private void Awake() {
         cam = Camera.main;
-        ResetCamera = cam.transform.position;
+        resetCamera = cam.transform.position;
     }
 
     private void LateUpdate() {
         if (Input.GetMouseButton(0))
         {
-            Diference = (cam.ScreenToWorldPoint(Input.mousePosition)) - cam.transform.position;
-            if (Drag == false)
+            difference = (cam.ScreenToWorldPoint(Input.mousePosition)) - cam.transform.position;
+            if (drag == false)
             {
-                Drag = true;
-                Origin = cam.ScreenToWorldPoint(Input.mousePosition);
+                drag = true;
+                origin = cam.ScreenToWorldPoint(Input.mousePosition);
             }
         }
         else
-            Drag = false;
+            drag = false;
 
-        if (Drag == true)
-            cam.transform.position = Origin - Diference;
+        if (drag == true)
+            cam.transform.position = origin - difference;
 
         if (Input.GetMouseButton(1))
-            cam.transform.position = ResetCamera;
+            cam.transform.position = resetCamera;
 
         clampedPos = cam.transform.position;
         if (clampedPos.x < llCorner.x)
