@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class RepairController : MonoBehaviour
 {
     public float repairSpeed;
-    public Text repairTextStatus;
+    //public Text repairTextStatus;
     public Sprite halfState;
     public Sprite quarterState;
 
@@ -48,7 +48,7 @@ public class RepairController : MonoBehaviour
         while(_repairState <= 1.0f) {
             _repairState += repairSpeed;
             float _repairPercentage = _repairState * 100;
-            repairTextStatus.text = _repairPercentage.ToString();
+            //repairTextStatus.text = _repairPercentage.ToString();
             yield return new WaitForSeconds(0.5f);
             if (_repairState > 0.33 && _repairState < 0.66) {
                 GetComponentInChildren<SpriteRenderer>().sprite = halfState;
@@ -57,7 +57,7 @@ public class RepairController : MonoBehaviour
             }
         }
         _repairManager.repairQueue.Dequeue();
-        repairTextStatus.text = "Not repairing";
+        //repairTextStatus.text = "Not repairing";
         // send message to event manager that repair is complete
         _repairManager.RepairNextObject();
         Destroy(gameObject);
