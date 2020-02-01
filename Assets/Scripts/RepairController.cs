@@ -7,6 +7,8 @@ public class RepairController : MonoBehaviour
 {
     public float repairSpeed;
     public Text repairTextStatus;
+    public Sprite halfState;
+    public Sprite quarterState;
 
     private float _repairState;
     private RepairManager _repairManager;
@@ -47,11 +49,17 @@ public class RepairController : MonoBehaviour
             _repairState += repairSpeed;
             float _repairPercentage = _repairState * 100;
             repairTextStatus.text = _repairPercentage.ToString();
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(0.5f);
+            if (_repairState > 0.33 && _repairState < 0.66) {
+                GetComponentInChildren<SpriteRenderer>().sprite = halfState;
+            } else if (_repairState > 0.66) {
+                GetComponentInChildren<SpriteRenderer>().sprite = quarterState;
+            }
         }
         _repairManager.repairQueue.Dequeue();
         repairTextStatus.text = "Not repairing";
         // send message to event manager that repair is complete
         _repairManager.RepairNextObject();
+        Destroy(gameObject);
     }
 }
