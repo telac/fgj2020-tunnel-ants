@@ -106,4 +106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbe0f320fbc8aa845828d86fe0f6b12e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  repairSpeed: 0
+  repairSpeed: 0.05
+  RepairManager: {fileID: 0}
+  repairTextStatus: {fileID: 0}
