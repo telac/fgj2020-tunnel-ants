@@ -18,7 +18,7 @@ public class BlockSpawner : MonoBehaviour
     }
 
     void Awake() {
-        StartCoroutine(StartSpawningRocks());
+        //StartCoroutine(StartSpawningRocks());
     }
 
     IEnumerator StartSpawningRocks() {
