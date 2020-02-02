@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance = null;
     public RepairManager RepairManager;
-    public BlockSpawner BlockSpawner;
+    //public BlockSpawner BlockSpawner;
 
     void Awake()
     {

@@ -13,6 +13,17 @@ public class AntSpawner : MonoBehaviour
     public GameObject item3;
     public GameObject item4;
 
+    private void Awake() {
+        StartCoroutine(StartSpawningAnts());
+    }
+
+    IEnumerator StartSpawningAnts() {
+        while(true) {
+            float _waitTime = Random.Range(0.7f, 2.0f);
+            yield return new WaitForSeconds(_waitTime);
+            SpawnAnt();
+        }
+    }
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Space))
         {

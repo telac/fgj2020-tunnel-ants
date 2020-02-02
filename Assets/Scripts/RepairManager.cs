@@ -15,7 +15,7 @@ public class RepairManager : MonoBehaviour
         if (repairQueue.Count == 1) {
             RepairNextObject();
         }
-        Debug.Log("currently   " + repairQueue.Count + "   objects to repair");
+        //Debug.Log("currently   " + repairQueue.Count + "   objects to repair");
     }
 
     public void RepairNextObject() {
