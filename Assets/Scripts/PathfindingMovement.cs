@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEngine.AI;
+using UnityEngine.AI;   
 using System.Collections;
 
 public class PathfindingMovement : MonoBehaviour {
@@ -8,6 +8,8 @@ public class PathfindingMovement : MonoBehaviour {
     private NavMeshPath path;
     private float elapsed = 0.0f;
     private NavMeshAgent agent;
+    private GameManager gameManager;
+
     public GameObject resizer;
 
     public enum Item {Empty, Baby, Blueb, Leaf, Strawb};
@@ -23,12 +25,15 @@ public class PathfindingMovement : MonoBehaviour {
     public GameObject carryLeaf;
     public GameObject carryStrawb;
 
+
+
     private void Awake() {
         startPos = transform.position;
         path = new NavMeshPath();
         elapsed = 0.0f;
         agent = GetComponent<NavMeshAgent>();
         StartCoroutine(UpdateIcon());
+        gameManager = GameManager.Instance;
     }
 
     private IEnumerator UpdateIcon()
@@ -86,6 +91,7 @@ public class PathfindingMovement : MonoBehaviour {
             StartCoroutine(UpdateIcon());
         } else
         {
+            gameManager.IncreaseScore();
             Destroy(target.gameObject);
             Destroy(gameObject);
         }

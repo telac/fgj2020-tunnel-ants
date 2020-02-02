@@ -69,7 +69,7 @@ public class RepairController : MonoBehaviour
             _repairState += repairSpeed;
             float _repairPercentage = _repairState * 100;
             //repairTextStatus.text = _repairPercentage.ToString();
-            yield return new WaitForSeconds(0.25f);
+            yield return new WaitForSeconds(0.15f);
             if (_repairState > 0.33 && _repairState < 0.66) {
                 GetComponentInChildren<SpriteRenderer>().sprite = halfState;
             } else if (_repairState > 0.66) {
