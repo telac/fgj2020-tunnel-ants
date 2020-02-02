@@ -1,7 +1,91 @@
 fileFormatVersion: 2
 guid: f4911301f9b3329449f7fb7d0e3ba214
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2541477756931456063
+    second: animate_dustcloud_0
+  - first:
+      213: -2203883653858748063
+    second: animate_dustcloud_1
+  - first:
+      213: -4575107541797879395
+    second: animate_dustcloud_2
+  - first:
+      213: 5165365895492899664
+    second: animate_dustcloud_3
+  - first:
+      213: 3048740535253643099
+    second: animate_dustcloud_4
+  - first:
+      213: 2663527129365991123
+    second: animate_dustcloud_5
+  - first:
+      213: -7110148031986890383
+    second: animate_dustcloud_6
+  - first:
+      213: -42340851581356372
+    second: animate_dustcloud_7
+  - first:
+      213: 1787073155259751331
+    second: animate_dustcloud_8
+  - first:
+      213: 8290130747217845521
+    second: animate_dustcloud_9
+  - first:
+      213: -6507709109127377061
+    second: animate_dustcloud_10
+  - first:
+      213: 7739101554314818333
+    second: animate_dustcloud_11
+  - first:
+      213: -5251606443969506394
+    second: animate_dustcloud_12
+  - first:
+      213: -8913942232919283789
+    second: animate_dustcloud_13
+  - first:
+      213: 128701362782149502
+    second: animate_dustcloud_0
+  - first:
+      213: -9081929673466288625
+    second: animate_dustcloud_1
+  - first:
+      213: 2440295277714604101
+    second: animate_dustcloud_2
+  - first:
+      213: 510865127894011641
+    second: animate_dustcloud_3
+  - first:
+      213: 9030659836515429638
+    second: animate_dustcloud_4
+  - first:
+      213: -6765290009469479143
+    second: animate_dustcloud_5
+  - first:
+      213: -1109069787419828671
+    second: animate_dustcloud_6
+  - first:
+      213: 8237335698161435902
+    second: animate_dustcloud_7
+  - first:
+      213: 4846353274624261089
+    second: animate_dustcloud_8
+  - first:
+      213: -3269960489588079860
+    second: animate_dustcloud_9
+  - first:
+      213: 7042324465692851392
+    second: animate_dustcloud_10
+  - first:
+      213: -211868302449237656
+    second: animate_dustcloud_11
+  - first:
+      213: 8874205110192304024
+    second: animate_dustcloud_12
+  - first:
+      213: 4796121791960125615
+    second: animate_dustcloud_13
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +124,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +154,315 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: animate_dustcloud_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 23
+        width: 216
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b1db2253d39c100800000000000000
+      internalID: 128701362782149502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animate_dustcloud_1
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 112
+        width: 160
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0666f1841186f180800000000000000
+      internalID: -9081929673466288625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animate_dustcloud_2
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 181
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5400e3730abadd120800000000000000
+      internalID: 2440295277714604101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animate_dustcloud_3
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 126
+        width: 83
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fec14c8025f61700800000000000000
+      internalID: 510865127894011641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animate_dustcloud_4
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 133
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60da3ea5649535d70800000000000000
+      internalID: 9030659836515429638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animate_dustcloud_5
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 165
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9179217949cdc12a0800000000000000
+      internalID: -6765290009469479143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animate_dustcloud_6
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 61
+        width: 53
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14e19b987eacb90f0800000000000000
+      internalID: -1109069787419828671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animate_dustcloud_7
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 39
+        width: 43
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef48e889c25e05270800000000000000
+      internalID: 8237335698161435902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animate_dustcloud_8
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 49
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ebb70e40a4b14340800000000000000
+      internalID: 4846353274624261089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animate_dustcloud_9
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 81
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c034a8c7244ce92d0800000000000000
+      internalID: -3269960489588079860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animate_dustcloud_10
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 65
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc3aaa2acc5bb160800000000000000
+      internalID: 7042324465692851392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animate_dustcloud_11
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 31
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8612955c6ea4f0df0800000000000000
+      internalID: -211868302449237656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animate_dustcloud_12
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 0
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89fe7f8b782872b70800000000000000
+      internalID: 8874205110192304024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animate_dustcloud_13
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 0
+        width: 24
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa01b4ddb5f3f8240800000000000000
+      internalID: 4796121791960125615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
