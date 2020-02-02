@@ -1,7 +1,8 @@
-﻿    using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class RepairController : MonoBehaviour
 {
@@ -76,7 +77,8 @@ public class RepairController : MonoBehaviour
                 GetComponentInChildren<SpriteRenderer>().sprite = quarterState;
             }
         }
-        _repairManager.repairQueue.Dequeue();
+        if (_repairManager.repairQueue.Count > 0)
+            _repairManager.repairQueue.Dequeue();
         //repairTextStatus.text = "Not repairing";
         // send message to event manager that repair is complete
         _repairManager.RepairNextObject();

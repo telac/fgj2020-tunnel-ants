@@ -21,7 +21,11 @@ public class RepairManager : MonoBehaviour
     public void RepairNextObject() {
         if (repairQueue.Count > 0) {
             GameObject _currentlyRepaired = repairQueue.Peek();
+            if (_currentlyRepaired == null) {
+                return;
+            } else {
             _currentlyRepaired.GetComponent<RepairController>().StartRepair();
+            }
         } else {
             Debug.Log("no objects to repair");
         }
