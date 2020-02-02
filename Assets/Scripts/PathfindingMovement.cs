@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PathfindingMovement : MonoBehaviour {
@@ -8,6 +9,9 @@ public class PathfindingMovement : MonoBehaviour {
     private NavMeshPath path;
     private float elapsed = 0.0f;
     private NavMeshAgent agent;
+    private int _happyScore = 0;
+    private int _sadScore = 0;
+
     public GameObject resizer;
 
     public enum Item {Empty, Baby, Blueb, Leaf, Strawb};
@@ -23,12 +27,16 @@ public class PathfindingMovement : MonoBehaviour {
     public GameObject carryLeaf;
     public GameObject carryStrawb;
 
+    private Text _happyScoreText;
+    private Text _angryScoreText;
+
     private void Awake() {
         startPos = transform.position;
         path = new NavMeshPath();
         elapsed = 0.0f;
         agent = GetComponent<NavMeshAgent>();
         StartCoroutine(UpdateIcon());
+        _happyScoreText = GameObject.Find("happyText").GetComponent<Text>();
     }
 
     private IEnumerator UpdateIcon()
@@ -88,6 +96,8 @@ public class PathfindingMovement : MonoBehaviour {
         {
             Destroy(target.gameObject);
             Destroy(gameObject);
+            _happyScore += 1;
+            _happyScoreText.text = _happyScore.ToString();
         }
     }
 
